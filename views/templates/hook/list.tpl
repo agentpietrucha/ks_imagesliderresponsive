@@ -34,7 +34,7 @@
 							<span><i class="icon-arrows "></i></span>
 						</div>
 						<div class="col-md-3">
-							<img src="{$image_baseurl}{$slide.image}" alt="{$slide.title}" class="img-thumbnail" />
+							<img src="{$image_baseurl}{$slide.image_desktop}" alt="{$slide.title}" class="img-thumbnail" />
 						</div>
 						<div class="col-md-8">
 							<h4 class="pull-left">
