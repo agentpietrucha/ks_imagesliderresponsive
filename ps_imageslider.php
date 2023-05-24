@@ -354,8 +354,8 @@ class Ps_ImageSlider extends Module implements WidgetInterface
             }
 
             /* Checks title/legend/description for default lang */
+            $id_lang_default = (int) Configuration::get('PS_LANG_DEFAULT');
             if (!Tools::isSubmit('id_slide')) {
-                $id_lang_default = (int) Configuration::get('PS_LANG_DEFAULT');
                 foreach ($this->image_types as $image_type) {
                     $image = $_FILES['image_' . $image_type . '_' . $id_lang_default];
                     if (!Tools::isSubmit('has_picture') && (!isset($image) || empty($image['tmp_name']))) {
@@ -733,7 +733,7 @@ class Ps_ImageSlider extends Module implements WidgetInterface
         );
 
         foreach ($results as $result) {
-            foreach($this->image_types as $imate_type) {
+            foreach($this->image_types as $image_type) {
                 $key = 'image_' . $image_type;
                 $images[$key][$result['id_lang']] = $result[$key];
             }
