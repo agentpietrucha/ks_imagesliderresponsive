@@ -354,7 +354,7 @@ class Ps_ImageSlider extends Module implements WidgetInterface
             }
 
             /* Checks title/legend/description for default lang */
-            if (!Tools:isSubmit('id_slide')) {
+            if (!Tools::isSubmit('id_slide')) {
                 $id_lang_default = (int) Configuration::get('PS_LANG_DEFAULT');
                 foreach ($this->image_types as $image_type) {
                     $image = $_FILES['image_' . $image_type . '_' . $id_lang_default];
