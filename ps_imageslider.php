@@ -149,7 +149,9 @@ class Ps_ImageSlider extends Module implements WidgetInterface
                     . '&utm_campaign=back-office-' . Tools::strtoupper($this->context->language->iso_code)
                     . '&utm_content=' . (defined('_PS_HOST_MODE_') ? 'ondemand' : 'download');
                 $rtlSuffix = $language['is_rtl'] ? '_rtl' : '';
-                $slide->image[$language['id_lang']] = sprintf('sample-%d%s.jpg', $i, $rtlSuffix);
+                foreach ($this->image_types as $image_type) {
+                    $slide->{'image_' . $image_type}[$language['id_lang']] = sprintf('sample-%d%s.jpg', $i, $rtlSuffix);
+                }
             }
             $slide->add();
         }
