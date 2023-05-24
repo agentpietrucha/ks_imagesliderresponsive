@@ -483,7 +483,7 @@ class Ps_ImageSlider extends Module implements WidgetInterface
                 $type = '';
                 $imagesize = 0;
                 foreach($this->image_types as $image_type) {
-                    $uploaded_image = $this->getImage($img_type, $language);
+                    $uploaded_image = $this->getImage($image_type, $language);
                     if (
                         isset($uploaded_image) &&
                         !empty($uploaded_image['tmp_name'])
@@ -691,7 +691,7 @@ class Ps_ImageSlider extends Module implements WidgetInterface
 
         $slides = Db::getInstance((bool) _PS_USE_SQL_SLAVE_)->executeS(
             'SELECT hs.`id_homeslider_slides` as id_slide, hss.`position`, hss.`active`, hssl.`title`,
-            hssl.`url`, hssl.`legend`, hssl.`description`, hssl.`image`
+            hssl.`url`, hssl.`legend`, hssl.`description`, hssl.`image_desktop`, hssl.`image_mobile`
             FROM ' . _DB_PREFIX_ . 'homeslider hs
             LEFT JOIN ' . _DB_PREFIX_ . 'homeslider_slides hss ON (hs.id_homeslider_slides = hss.id_homeslider_slides)
             LEFT JOIN ' . _DB_PREFIX_ . 'homeslider_slides_lang hssl ON (hss.id_homeslider_slides = hssl.id_homeslider_slides)
@@ -876,8 +876,10 @@ class Ps_ImageSlider extends Module implements WidgetInterface
             $has_picture = true;
 
             foreach (Language::getLanguages(false) as $lang) {
-                if (!isset($slide->image[$lang['id_lang']])) {
-                    $has_picture &= false;
+                foreach($this->image_types as $image_type) {
+                    if (!isset($slide->{'image_' . $image_type}[$lang['id_lang']])) {
+                        $has_picture &= false;
+                    }
                 }
             }
 
