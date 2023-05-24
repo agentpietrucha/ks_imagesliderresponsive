@@ -69,7 +69,7 @@ class Ps_HomeSlide extends ObjectModel
         $res = true;
 
         $images_desktop = $this->image_desktop;
-        foreach ($images as $image) {
+        foreach ($images_desktop as $image) {
             if (preg_match('/sample/', $image) === 0) {
                 if ($image && file_exists(__DIR__ . '/images/' . $image)) {
                     $res &= @unlink(__DIR__ . '/images/' . $image);
@@ -78,7 +78,7 @@ class Ps_HomeSlide extends ObjectModel
         }
 
         $images_mobile = $this->image_mobile;
-        foreach ($images as $image) {
+        foreach ($images_mobile as $image) {
             if (preg_match('/sample/', $image) === 0) {
                 if ($image && file_exists(__DIR__ . '/images/' . $image)) {
                     $res &= @unlink(__DIR__ . '/images/' . $image);
