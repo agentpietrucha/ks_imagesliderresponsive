@@ -4,8 +4,8 @@ includes:
 parameters:
   paths:
     # From PHPStan 0.12, paths to check are relative to the neon file
-    - ../../ps_imageslider.php
-    - ../../Ps_HomeSlide.php
+    - ../../ks_imagesliderresponsive.php
+    - ../../Ks_HomeSlide.php
     - ../../translations/
     - ../../upgrade/
     - ../../views/

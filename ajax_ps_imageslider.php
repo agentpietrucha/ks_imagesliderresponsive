@@ -19,9 +19,9 @@
  */
 include_once '../../config/config.inc.php';
 include_once '../../init.php';
-include_once 'ps_imageslider.php';
+include_once 'ks_imagesliderresponsive.php';
 
-$home_slider = new Ps_ImageSlider();
+$home_slider = new Ks_ImageSliderResponsive();
 $slides = [];
 
 if (!Tools::isSubmit('secure_key') || Tools::getValue('secure_key') != $home_slider->secure_key || !Tools::getValue('action')) {

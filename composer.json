@@ -1,12 +1,11 @@
 {
-    "name": "prestashop/ps_imageslider",
-    "description": "PrestaShop - Image slider",
-    "homepage": "https://github.com/PrestaShop/ps_imageslider",
+    "name": "karol_sawicki/ks_imagesliderresponsive",
+    "description": "Karol Sawicki - Responsive image slider",
     "license": "AFL-3.0",
     "authors": [
         {
-            "name": "PrestaShop SA",
-            "email": "contact@prestashop.com"
+            "name": "Karol Sawicki",
+            "email": "agentpietrucha@gmail.com"
         }
     ],
     "require": {
@@ -22,8 +21,8 @@
     "type": "prestashop-module",
     "autoload": {
         "classmap": [
-            "ps_imageslider.php"
+            "ks_imagesliderresponsive.php"
         ]
     },
-    "author": "PrestaShop"
+    "author": "Karol Sawicki"
 }

@@ -18,7 +18,7 @@
  *}
 <div class="panel"><h3><i class="icon-list-ul"></i> {l s='Slides list' d='Modules.Imageslider.Admin'}
 	<span class="panel-heading-action">
-		<a id="desc-product-new" class="list-toolbar-btn" href="{$link->getAdminLink('AdminModules')}&configure=ps_imageslider&addSlide=1">
+		<a id="desc-product-new" class="list-toolbar-btn" href="{$link->getAdminLink('AdminModules')}&configure=ks_imagesliderresponsive&addSlide=1">
 			<span title="" data-toggle="tooltip" class="label-tooltip" data-original-title="{l s='Add new' d='Admin.Actions'}" data-html="true">
 				<i class="process-icon-new "></i>
 			</span>
@@ -51,12 +51,12 @@
 								{$slide.status}
 
 								<a class="btn btn-default"
-									href="{$link->getAdminLink('AdminModules')}&configure=ps_imageslider&id_slide={$slide.id_slide}">
+									href="{$link->getAdminLink('AdminModules')}&configure=ks_imagesliderresponsive&id_slide={$slide.id_slide}">
 									<i class="icon-edit"></i>
 									{l s='Edit' d='Admin.Actions'}
 								</a>
 								<a class="btn btn-default"
-									href="{$link->getAdminLink('AdminModules')}&configure=ps_imageslider&delete_id_slide={$slide.id_slide}">
+									href="{$link->getAdminLink('AdminModules')}&configure=ks_imagesliderresponsive&delete_id_slide={$slide.id_slide}">
 									<i class="icon-trash"></i>
 									{l s='Delete' d='Admin.Actions'}
 								</a>
