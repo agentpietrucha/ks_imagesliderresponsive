@@ -19,9 +19,9 @@
  */
 include_once '../../config/config.inc.php';
 include_once '../../init.php';
-include_once 'ps_imageslider.php';
+include_once 'ks_imagesliderresponsive.php';
 
-$home_slider = new Ps_ImageSlider();
+$home_slider = new Ks_ImageSliderResponsive();
 $slides = [];
 
 if (!Tools::isSubmit('secure_key') || Tools::getValue('secure_key') != $home_slider->secure_key || !Tools::getValue('action')) {
@@ -33,7 +33,7 @@ if (Tools::getValue('action') == 'updateSlidesPosition' && Tools::getValue('slid
 
     foreach ($slides as $position => $id_slide) {
         $res = Db::getInstance()->execute('
-			UPDATE `' . _DB_PREFIX_ . 'homeslider_slides` SET `position` = ' . (int) $position . '
+			UPDATE `' . DB_PREFIX . 'homeslider_slides` SET `position` = ' . (int) $position . '
 			WHERE `id_homeslider_slides` = ' . (int) $id_slide
         );
     }
