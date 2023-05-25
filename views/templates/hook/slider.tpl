@@ -23,7 +23,11 @@
       {foreach from=$homeslider.slides item=slide}
         <li class="slide">
           {if !empty($slide.url)}<a href="{$slide.url}">{/if}
-            <img src="{$slide.image_url}" alt="{$slide.legend|escape}" />
+            <figure class="carousel-content">
+            <picture>
+              <source media="(max-width: 576px)" srcset="{$slide.image_mobile_url}">
+              <img src="{$slide.image_desktop_url}" alt="{$slide.legend|escape}" loading="lazy">
+            </picture>
             {if $slide.title || $slide.description }
               <span class="caption">
                 <h2>{$slide.title}</h2>
