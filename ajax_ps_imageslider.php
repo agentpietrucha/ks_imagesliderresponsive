@@ -33,7 +33,7 @@ if (Tools::getValue('action') == 'updateSlidesPosition' && Tools::getValue('slid
 
     foreach ($slides as $position => $id_slide) {
         $res = Db::getInstance()->execute('
-			UPDATE `' . DB_PREFIX . 'homeslider_slides` SET `position` = ' . (int) $position . '
+			UPDATE `' . _DB_PREFIX_ . 'homeslider_slides` SET `position` = ' . (int) $position . '
 			WHERE `id_homeslider_slides` = ' . (int) $id_slide
         );
     }
