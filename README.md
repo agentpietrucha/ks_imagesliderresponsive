@@ -4,7 +4,7 @@
 
 This is extension of the original [ps_imageslider module]([url](https://github.com/PrestaShop/ps_imageslider)). It adds second image for devices with smaller screens size. There are two types of images, both are required to add: 
 - `image_desktop`,
-- `image_mobile
+- `image_mobile`
 
 For any additional documentation and information please refer to the original [ps_imageslider module]([url](https://github.com/PrestaShop/ps_imageslider)).
 
